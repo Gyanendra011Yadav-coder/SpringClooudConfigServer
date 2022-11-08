@@ -1,6 +1,8 @@
 package io.gyanendra.learning.springconfigserverimplmentaionlearning.controller;
 
 import io.gyanendra.learning.springconfigserverimplmentaionlearning.bean.LogingDetails;
+import io.gyanendra.learning.springconfigserverimplmentaionlearning.config.LogInConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginDetailController {
     //Dummy: AuthUrl
-    String authUrl = "http://www.facebook.com";
-    String login = "http://www.facebook.com/login";
+    @Autowired
+    LogInConfig logInConfig;
 
     @GetMapping(value = "/loginDetails")
     public LogingDetails getLoginDetails() {
-        return new LogingDetails(login,authUrl);
+        return new LogingDetails(logInConfig.getLoginUrl(),logInConfig.getAuthUrl());
     }
 }

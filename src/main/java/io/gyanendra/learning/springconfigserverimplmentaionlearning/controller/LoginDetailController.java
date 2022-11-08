@@ -1,6 +1,6 @@
-package controller;
+package io.gyanendra.learning.springconfigserverimplmentaionlearning.controller;
 
-import bean.LogingDetails;
+import io.gyanendra.learning.springconfigserverimplmentaionlearning.bean.LogingDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

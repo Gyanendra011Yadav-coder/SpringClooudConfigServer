@@ -1,4 +1,6 @@
-package bean;
+package io.gyanendra.learning.springconfigserverimplmentaionlearning.bean;
+
+import org.springframework.context.annotation.Bean;
 
 /**
  * Created By:  Gyanendra_Yadv
